@@ -19,7 +19,6 @@ namespace WindowsFormsApp2
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            string imageLocation = "";
             try
             {
                 var dialog = new OpenFileDialog();
