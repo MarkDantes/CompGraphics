@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace WindowsFormsApp2
 {
@@ -80,13 +81,68 @@ namespace WindowsFormsApp2
             return bitmap_image;
 
         }
+
+        private int[] createDataForChart(ColorChannel channel, Image image)
+        {
+            int[] color = new int[256];
+            Bitmap bitmap_image = new Bitmap(image);
+            for (int i = 0; i < bitmap_image.Width; i++)
+            {
+                for (int j = 0; j < bitmap_image.Height; j++)
+                {
+                    //get the pixel from the scrBitmap image
+                    var actualColor = bitmap_image.GetPixel(i, j);
+                    switch (channel)
+                    {
+                        case ColorChannel.R:
+                            {
+                                var value = actualColor.R;
+                                color[value]++;
+                                break;
+                            }
+                        case ColorChannel.G:
+                            {
+                                var value = actualColor.G;
+                                color[value]++;
+                                break;
+                            }
+                        case ColorChannel.B:
+                            {
+                                var value = actualColor.B;
+                                color[value]++;
+                                break;
+                            }
+                        default: break;
+                    }
+                }
+            }
+            return color;
+        }
         
 
         private void PictureBox1_LoadCompleted(Object sender, AsyncCompletedEventArgs e)
         {
-            pictureBox2.Image = highlightChannel(ColorChannel.R, pictureBox1.Image);
-            pictureBox3.Image = highlightChannel(ColorChannel.G, pictureBox1.Image);
-            pictureBox4.Image = highlightChannel(ColorChannel.B, pictureBox1.Image);
+            var redImage = highlightChannel(ColorChannel.R, pictureBox1.Image);
+            var greenImage = highlightChannel(ColorChannel.G, pictureBox1.Image);
+            var blueImage = highlightChannel(ColorChannel.B, pictureBox1.Image);
+
+            pictureBoxRed.Image = redImage;
+            pictureBoxGreen.Image = greenImage;
+            pictureBoxBlue.Image = blueImage;
+
+            var valuesRed = createDataForChart(ColorChannel.R, pictureBox1.Image);
+            var valuesGreen = createDataForChart(ColorChannel.G, pictureBox1.Image);
+            var valuesBlue = createDataForChart(ColorChannel.B, pictureBox1.Image);
+            for (int i = 0; i < 256; i++)
+            {
+                Series series = this.chartR.Series.Add(i.ToString());
+                series.Points.Add(valuesRed[i]);
+                series = this.chartG.Series.Add(i.ToString());
+                series.Points.Add(valuesGreen[i]);
+                series = this.chartB.Series.Add(i.ToString());
+                series.Points.Add(valuesBlue[i]);
+            }
+            
         }
 
 
