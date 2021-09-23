@@ -1,0 +1,10 @@
+C:\GitProjects\CompGraphics\WindowsFormsApp2\bin\Release\WindowsFormsApp2.exe.config
+C:\GitProjects\CompGraphics\WindowsFormsApp2\bin\Release\WindowsFormsApp2.exe
+C:\GitProjects\CompGraphics\WindowsFormsApp2\bin\Release\WindowsFormsApp2.pdb
+C:\GitProjects\CompGraphics\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csprojAssemblyReference.cache
+C:\GitProjects\CompGraphics\WindowsFormsApp2\obj\Release\WindowsFormsApp2.Form1.resources
+C:\GitProjects\CompGraphics\WindowsFormsApp2\obj\Release\WindowsFormsApp2.Properties.Resources.resources
+C:\GitProjects\CompGraphics\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\GitProjects\CompGraphics\WindowsFormsApp2\obj\Release\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\GitProjects\CompGraphics\WindowsFormsApp2\obj\Release\WindowsFormsApp2.exe
+C:\GitProjects\CompGraphics\WindowsFormsApp2\obj\Release\WindowsFormsApp2.pdb
