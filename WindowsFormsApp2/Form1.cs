@@ -25,7 +25,8 @@ namespace WindowsFormsApp2
                 dialog.Filter = "PNG files|*.png| jpg files(*.jpg)|*.jpg| All files(*.*)|*.*";
                 if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    pictureBox1.ImageLocation = dialog.FileName;
+                    pictureBox1.LoadAsync(dialog.FileName);
+                    //pictureBox1.ImageLocation = dialog.FileName;
                 }
             }
             catch (Exception)
@@ -33,5 +34,61 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Error");
             }
         }
+
+        enum ColorChannel
+        {
+            R,G,B,
+        }
+
+        private Bitmap highlightChannel(ColorChannel channel, Image image)
+        {
+            Bitmap bitmap_image = new Bitmap(image);
+            for (int i = 0; i < bitmap_image.Width; i++)
+            {
+                for (int j = 0; j < bitmap_image.Height; j++)
+                {
+                    //get the pixel from the scrBitmap image
+                    var actualColor = bitmap_image.GetPixel(i, j);
+                    var valueAlpha = actualColor.A;
+                    switch (channel)
+                    {
+                        case ColorChannel.R:
+                            {
+                                var value = actualColor.R;
+                                var newColor = Color.FromArgb(valueAlpha, value, 0, 0);
+                                bitmap_image.SetPixel(i, j, newColor);
+                                break;
+                            }
+                        case ColorChannel.G:
+                            {
+                                var value = actualColor.G;
+                                var newColor = Color.FromArgb(valueAlpha, 0, value, 0);
+                                bitmap_image.SetPixel(i, j, newColor);
+                                break;
+                            }
+                        case ColorChannel.B:
+                            {
+                                var value = actualColor.B;
+                                var newColor = Color.FromArgb(valueAlpha, 0, 0, value);
+                                bitmap_image.SetPixel(i, j, newColor);
+                                break;
+                            }
+                        default: break;
+                    }
+                }
+            }
+            return bitmap_image;
+
+        }
+        
+
+        private void PictureBox1_LoadCompleted(Object sender, AsyncCompletedEventArgs e)
+        {
+            pictureBox2.Image = highlightChannel(ColorChannel.R, pictureBox1.Image);
+            pictureBox3.Image = highlightChannel(ColorChannel.G, pictureBox1.Image);
+            pictureBox4.Image = highlightChannel(ColorChannel.B, pictureBox1.Image);
+        }
+
+
     }
 }
