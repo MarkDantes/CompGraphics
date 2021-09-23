@@ -1,0 +1,16 @@
+C:\Users\Артём\source\repos\Grayscale\Grayscale\bin\Debug\netcoreapp3.1\Grayscale.exe
+C:\Users\Артём\source\repos\Grayscale\Grayscale\bin\Debug\netcoreapp3.1\Grayscale.deps.json
+C:\Users\Артём\source\repos\Grayscale\Grayscale\bin\Debug\netcoreapp3.1\Grayscale.runtimeconfig.json
+C:\Users\Артём\source\repos\Grayscale\Grayscale\bin\Debug\netcoreapp3.1\Grayscale.runtimeconfig.dev.json
+C:\Users\Артём\source\repos\Grayscale\Grayscale\bin\Debug\netcoreapp3.1\Grayscale.dll
+C:\Users\Артём\source\repos\Grayscale\Grayscale\bin\Debug\netcoreapp3.1\Grayscale.pdb
+C:\Users\Артём\source\repos\Grayscale\Grayscale\obj\Debug\netcoreapp3.1\Grayscale.csprojAssemblyReference.cache
+C:\Users\Артём\source\repos\Grayscale\Grayscale\obj\Debug\netcoreapp3.1\Grayscale.Form1.resources
+C:\Users\Артём\source\repos\Grayscale\Grayscale\obj\Debug\netcoreapp3.1\Grayscale.csproj.GenerateResource.cache
+C:\Users\Артём\source\repos\Grayscale\Grayscale\obj\Debug\netcoreapp3.1\Grayscale.AssemblyInfoInputs.cache
+C:\Users\Артём\source\repos\Grayscale\Grayscale\obj\Debug\netcoreapp3.1\Grayscale.AssemblyInfo.cs
+C:\Users\Артём\source\repos\Grayscale\Grayscale\obj\Debug\netcoreapp3.1\Grayscale.csproj.CoreCompileInputs.cache
+C:\Users\Артём\source\repos\Grayscale\Grayscale\obj\Debug\netcoreapp3.1\Grayscale.dll
+C:\Users\Артём\source\repos\Grayscale\Grayscale\obj\Debug\netcoreapp3.1\Grayscale.pdb
+C:\Users\Артём\source\repos\Grayscale\Grayscale\obj\Debug\netcoreapp3.1\Grayscale.genruntimeconfig.cache
+C:\Users\Артём\source\repos\Grayscale\Grayscale\obj\Debug\netcoreapp3.1\Grayscale.Properties.Resources.resources
