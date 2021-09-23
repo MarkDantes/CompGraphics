@@ -16,5 +16,23 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            string imageLocation = "";
+            try
+            {
+                var dialog = new OpenFileDialog();
+                dialog.Filter = "PNG files|*.png| jpg files(*.jpg)|*.jpg| All files(*.*)|*.*";
+                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    pictureBox1.ImageLocation = dialog.FileName;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error");
+            }
+        }
     }
 }
