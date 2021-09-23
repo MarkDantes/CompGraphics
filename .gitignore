@@ -376,3 +376,6 @@ InteropTests/NativeTests/out
 /src/System.Windows.Forms/src/comctl32.dll
 *.received.*
 *.ide
+WindowsFormsApp2/.vs/WindowsFormsApp2/v16/Server/sqlite3/storage.ide
+WindowsFormsApp2/.vs/WindowsFormsApp2/v16/Server/sqlite3/storage.ide-shm
+WindowsFormsApp2/.vs/WindowsFormsApp2/v16/Server/sqlite3/storage.ide-wal

@@ -178,7 +178,6 @@ namespace WindowsFormsApp2
             }
             pictureBox1.Image = image;
         }
-<<<<<<< HEAD
    
 
         private void TrackBar3_ValueChanged(object sender, EventArgs e)
@@ -204,7 +203,6 @@ namespace WindowsFormsApp2
             }
             pictureBox1.Image = image;
         }
-=======
 
         enum ColorChannel
         {
@@ -320,7 +318,6 @@ namespace WindowsFormsApp2
             
         }
 
->>>>>>> main
 
     }
 }
