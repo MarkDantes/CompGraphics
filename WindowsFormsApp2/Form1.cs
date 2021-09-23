@@ -133,6 +133,11 @@ namespace WindowsFormsApp2
             var valuesRed = createDataForChart(ColorChannel.R, pictureBox1.Image);
             var valuesGreen = createDataForChart(ColorChannel.G, pictureBox1.Image);
             var valuesBlue = createDataForChart(ColorChannel.B, pictureBox1.Image);
+
+            this.chartR.Series.Clear();
+            this.chartG.Series.Clear();
+            this.chartB.Series.Clear();
+
             for (int i = 0; i < 256; i++)
             {
                 Series series = this.chartR.Series.Add(i.ToString());
